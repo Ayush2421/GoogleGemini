@@ -1,0 +1,27 @@
+*{
+  padding:0px;
+  margin:0px;
+  box-sizing:border-box;
+}
+:root{
+  --bgColor: black;
+  --fontColor: rgb(189, 199, 207);
+  --sideBarColor:rgb(57, 86, 88);
+  --elementsContainerColor: rgb(62, 3, 3);
+  --elementsContainerHoverColor: lightGreen;
+}
+body{
+  width:100vw;
+  height:100vh;
+  background-color: var(--bgColor);
+  color: var(--fontColor);
+  font-size: 15px;
+}
+
+img{
+  width: 20px;
+  height: 20px;
+}
+.geminiContainer{
+  display: flex;
+}

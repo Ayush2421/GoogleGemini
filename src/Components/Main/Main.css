@@ -1,0 +1,184 @@
+.Main{
+    width:100%;
+    height: 100vh;
+    padding: 5px;
+    gap:5px;
+    display: flex;
+    flex-direction: column;
+}
+/* 👉navBar */
+.navBar{
+    height:10%;
+    padding: 0px 20px;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.navBar>img{
+    border-radius: 50%;
+}
+.navBar>img:hover{
+    scale: 1.2;
+    box-shadow: 0px 0px 10px wheat;
+}
+
+/* 👉contents */
+.contents{
+    height:70%;
+    position: relative;
+}
+/* 👉info */
+.info{
+    position: absolute;
+    width:100%;
+    height:40%;
+    top:0;
+    padding: 15px;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2vw
+}
+/* 👉displayCard */
+.displayCard{
+    position: absolute;
+    width:100%;
+    height:60%;
+    bottom: 0;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card{
+    min-width: 25%;
+    min-height: 80%;
+    background-color: rgb(21, 186, 18);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+.card>span{
+    width:100%;
+    font-size: 2vw;
+}
+.card>img{
+    position:absolute;
+    bottom:0;
+    right:0;
+}
+
+/* 👉 searchResult*/
+.searchResult{
+    height:70%;
+    position: relative;
+    
+}
+.questionContainer{
+    width:100%;
+    height:20%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top:0;
+    padding: 10px 50px;
+}
+.questionContainer > span{
+    text-wrap: wrap;
+    overflow-y: hidden;
+    line-height: 18px;
+    letter-spacing: 1.2px;
+    font-size: 2vw;
+}
+.resultContainer{
+    height:80%;
+    display: flex;
+    justify-content: top;
+    position: absolute;
+    bottom: 0;
+    padding: 10px 50px;
+}
+.resultContainer>p{
+    text-wrap: wrap;
+    overflow-y: hidden;
+    line-height: 18px;
+    letter-spacing: 1.2px;
+    /* text-align: justify; */
+    font-size: 2vw;
+}
+.searchResultImage{
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+
+
+
+/* 👉searchItems */
+.searchItems{
+    height:20%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.inputField{
+    height: 25px;
+    width:80%;
+    display: flex;
+    align-items: center;
+    background-color: antiquewhite;
+    border-radius: 50px;
+
+}
+.inputField> input{
+    background: transparent;
+    border: none;
+    outline:none;
+    width:100%;
+    padding: 0px 8px;
+}
+.inputField > img{
+    height: 15px;
+    width: 15px;
+    margin:0px 3px;
+}
+.inputField>img:hover{
+    cursor:pointer;
+    filter: drop-shadow(0px 0px 1px rgb(169, 3, 3));
+
+}
+.textBelowInput{
+    width:70%;
+    margin-top:8px;
+    padding: 5px;
+    font-size: 1.6vw;
+}
+
+@media (width < 500px){
+    .info{
+        height: 25%;
+    }
+    .displayCard{
+        height:75%;
+        padding: 10px 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    .card{
+        min-width: 50%;
+        margin: 0px;
+        min-height: 30%;
+    }
+    .card>span{
+        font-size: 3vw;
+    }
+    .resultContainer>p{
+        font-size: 3vw;
+    }
+    .questionContainer > span{
+        font-size: 3vw;
+    }
+}

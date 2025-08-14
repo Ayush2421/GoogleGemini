@@ -1,0 +1,5 @@
+~Dependency Install~
+
+Steps:
+1 : npm i 👉for node
+2: npm install @google/genai 👉for Gemini configure
