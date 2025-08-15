@@ -23,8 +23,7 @@ export default function FooterItems(){
             <img src={geminiAssets.mic_icon} alt="mic"/>
             <img onClick={handleSentBtn} src={geminiAssets.send_icon} alt="send"/>
             </div>
-            <p className="textBelowInput">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            ipsum iste enim natus laudantium veniam.</p>
+            <p className="textBelowInput">Gemini can make mistakes, so double-check it</p>
             
         </div>
     )

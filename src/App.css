@@ -4,11 +4,13 @@
   box-sizing:border-box;
 }
 :root{
-  --bgColor: black;
-  --fontColor: rgb(189, 199, 207);
-  --sideBarColor:rgb(57, 86, 88);
-  --elementsContainerColor: rgb(62, 3, 3);
-  --elementsContainerHoverColor: lightGreen;
+  --bgColor: white;
+  --fontColor: black;
+  --sideBarColor:rgb(230, 237, 237);
+  --elementsContainerColor: rgb(221, 229, 230);
+  --elementsContainerHoverColor: rgb(162, 186, 189);
+  --commonHoverColor: rgb(26, 119, 132);
+  --commonBorderColor: black;
 }
 body{
   width:100vw;
@@ -16,6 +18,9 @@ body{
   background-color: var(--bgColor);
   color: var(--fontColor);
   font-size: 15px;
+}
+h1{
+  font-size: 4vw;
 }
 
 img{

@@ -19,7 +19,7 @@
 }
 .navBar>img:hover{
     scale: 1.2;
-    box-shadow: 0px 0px 10px wheat;
+    box-shadow: 0px 0px 10px var(--commonHoverColor);
 }
 
 /* 👉contents */
@@ -47,27 +47,30 @@
     height:60%;
     bottom: 0;
     padding: 10px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 20px;
 }
 .card{
-    min-width: 25%;
-    min-height: 80%;
-    background-color: rgb(21, 186, 18);
+    border: 1px solid var(--commonBorderColor);
+    background-color: var(--elementsContainerColor);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
 }
+.card:hover{
+    background-color: var(--elementsContainerHoverColor);
+}
 .card>span{
-    width:100%;
-    font-size: 2vw;
+    max-width:auto;
+    font-size: 2.4vw;
+    padding: 5px;
 }
 .card>img{
     position:absolute;
-    bottom:0;
-    right:0;
+    bottom:8px;
+    right:8px;
 }
 
 /* 👉 searchedResult*/
@@ -128,11 +131,11 @@
 }
 .inputField{
     height: 25px;
-    width:80%;
+    width: 60%;
     display: flex;
     align-items: center;
-    background-color: antiquewhite;
     border-radius: 50px;
+    border: 1px solid var(--commonBorderColor);
 
 }
 .inputField> input{
@@ -149,7 +152,8 @@
 }
 .inputField>img:hover{
     cursor:pointer;
-    filter: drop-shadow(0px 0px 1px rgb(169, 3, 3));
+    scale: 1.2;
+    filter: drop-shadow(0px 0px 0.5px var(--commonHoverColor));
 
 }
 .textBelowInput{
@@ -157,6 +161,8 @@
     margin-top:8px;
     padding: 5px;
     font-size: 1.6vw;
+    display: flex;
+    justify-content: center;
 }
 
 @media (width < 500px){

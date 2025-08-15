@@ -16,13 +16,13 @@ export default function TopContainer({ collapse, setCollapse }) {
             {
                 !collapse &&
                     <div className="previewContainer">
-                        <label>Recent</label>
+                        <h4>Search History</h4>
                         {
                             historyPrompt.slice(start, end).reverse().map((element, index) => {
                                 return (
-                                    <div className="messageContainer elements" key={index}>
+                                    <div className="messageContainer sideBarElements" key={index}>
                                     <img src={geminiAssets.message_icon} alt="message" />
-                                    <p> {element.slice(0, 10)+"..."} </p>
+                                    <label> {element.length>10 ? element.slice(0, 10)+"..." : element} </label>
                                     </div>)
                             })
                         }

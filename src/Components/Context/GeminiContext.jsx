@@ -5,15 +5,15 @@ import { geminiAssets } from "../../assets/geminiAssets";
 export const context = createContext();
 export const displayCardData= [
     {
-        title: "compass", 
-        image : geminiAssets.bulb_icon
+        title: "Explore the world to explore yourself.", 
+        image : geminiAssets.compass_icon
     },
     {
-        title: "code",
+        title: "Make the code easier to read.",
         image : geminiAssets.code_icon
     },
     {
-        title: "bulb",
+        title: "Align with societal needs, safety & beauty",
         image : geminiAssets.bulb_icon
     }
 ]

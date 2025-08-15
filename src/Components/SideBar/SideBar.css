@@ -9,7 +9,7 @@ background-color: var(--sideBarColor);
 }
 .topContainer>img:hover{
     scale: 1.2;
-    box-shadow: 0px 0px 5px wheat;
+    box-shadow: 0px 0px 8px var(--commonHoverColor);
     cursor:pointer;
 }
 .topContainer, .bottomContainer{
@@ -20,7 +20,7 @@ background-color: var(--sideBarColor);
     max-height: 40vh;
     min-width: 120px;
 }
-.elements{
+.sideBarElements{
     display: flex;
     align-items: center;
     padding: 0px 8px;
@@ -28,7 +28,9 @@ background-color: var(--sideBarColor);
     border-radius: 50px;
     background-color: var(--elementsContainerColor);
 }
-.elements:hover{
+.sideBarElements:hover{
     background-color: var(--elementsContainerHoverColor);
-    cursor:pointer;
+}
+.sideBarElements> label{
+    padding-left:5px;
 }
