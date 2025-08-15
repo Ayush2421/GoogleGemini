@@ -17,15 +17,15 @@ body{
   height:100vh;
   background-color: var(--bgColor);
   color: var(--fontColor);
-  font-size: 15px;
+  font-size: 2vw;
 }
 h1{
   font-size: 4vw;
 }
 
 img{
-  width: 20px;
-  height: 20px;
+  width: 3vw;
+  height: auto;
 }
 .geminiAppContainer{
   display: flex;

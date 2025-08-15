@@ -103,23 +103,26 @@
     position: absolute;
     bottom: 0;
     padding: 10px 50px;
+    padding-left: 16vw;
 }
 .resultContainer>p{
-    padding-left:5px;
-    text-wrap: wrap;
-    overflow-y: hidden;
-    line-height: 18px;
-    letter-spacing: 1.2px;
-    /* text-align: justify; */
+    letter-spacing: 1.1px;
     font-size: 2vw;
+    overflow-y: hidden;
+    overflow: scroll;
 }
-.questionContainer>img .resultContainer>img{
-    margin-right: 10px;
-    border-radius: 50%;
+.resultContainer>p::-webkit-scrollbar {
+    display: none;
+  }
+.resultContainer>p::first-letter{
+    font-size: 3vw;
+    font-weight: 900;
+    text-transform: uppercase;
 }
-
-
-
+.questionContainer>img{
+    width:8vw;
+    margin-right: 2px;
+}
 
 /* 👉searchItems */
 .footerItems{
@@ -130,7 +133,7 @@
     align-items: center;
 }
 .inputField{
-    height: 25px;
+    height: 8vh;
     width: 60%;
     display: flex;
     align-items: center;
@@ -143,11 +146,12 @@
     border: none;
     outline:none;
     width:100%;
+    font-size: 2vw;
     padding: 0px 8px;
 }
 .inputField > img{
-    height: 15px;
-    width: 15px;
+    width: 3vw;
+    height: auto;
     margin:0px 3px;
 }
 .inputField>img:hover{

@@ -18,7 +18,7 @@ background-color: var(--sideBarColor);
 .previewContainer{
     margin-top: 15px;
     max-height: 40vh;
-    min-width: 120px;
+    min-width: 16vw;
 }
 .sideBarElements{
     display: flex;
