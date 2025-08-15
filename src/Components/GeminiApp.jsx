@@ -2,9 +2,9 @@
 import SideBar from "./SideBar/SideBar"
 import Main from "./Main/Main"
 
-export default function Gemini(){
+export default function GeminiApp(){
     return ( 
-      <div className="geminiContainer">
+      <div className="geminiAppContainer">
       <SideBar/>
       <Main/>
       </div>

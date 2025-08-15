@@ -20,7 +20,6 @@ background-color: var(--sideBarColor);
     max-height: 40vh;
     min-width: 120px;
 }
-
 .elements{
     display: flex;
     align-items: center;

@@ -14,10 +14,9 @@ export default function TopContainer({ collapse, setCollapse }) {
             <img onClick={() => setCollapse((prev) => !prev)} src={geminiAssets.menu_icon} alt="menu" />
 
             {
-                !collapse ?
+                !collapse &&
                     <div className="previewContainer">
                         <label>Recent</label>
-
                         {
                             historyPrompt.slice(start, end).reverse().map((element, index) => {
                                 return (
@@ -27,8 +26,7 @@ export default function TopContainer({ collapse, setCollapse }) {
                                     </div>)
                             })
                         }
-
-                    </div> : null
+                    </div> 
             }
         </div>
     )

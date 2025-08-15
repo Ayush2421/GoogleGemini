@@ -1,7 +1,22 @@
 import { createContext, useState } from "react";
 import GeminiConfig from "../config/GeminiConfig";
+import { geminiAssets } from "../../assets/geminiAssets";
 
 export const context = createContext();
+export const displayCardData= [
+    {
+        title: "compass", 
+        image : geminiAssets.bulb_icon
+    },
+    {
+        title: "code",
+        image : geminiAssets.code_icon
+    },
+    {
+        title: "bulb",
+        image : geminiAssets.bulb_icon
+    }
+]
 
 export const GeminiContext = (props) => {
     const recentlengthTab = 4;
@@ -9,7 +24,7 @@ export const GeminiContext = (props) => {
     const [historyPrompt, setHistoryPrompt] =useState([]);
     const [searchingResult, setSearchingResult]= useState(false);
     const [resultData, setResultData]= useState("");
-    const [resultCount, setSetResultCount]= useState(0);
+    const [resultCount, setSetResultCount]= useState(0); //to show 5 data in sideBar
     const [loading, setLoading]= useState(false);
 
     const showDelayInWord = ((index, word)=>{
@@ -26,7 +41,6 @@ export const GeminiContext = (props) => {
             (index %2 ===1) ? ("<b>"+e+"</b>"): e
         )
         result = removeDoubleStar.join("").split("*").join("</br>");
-
         result.split("").forEach((e, i)=>{
             showDelayInWord(i, e)
         })

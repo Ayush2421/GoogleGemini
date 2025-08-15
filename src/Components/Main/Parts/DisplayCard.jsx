@@ -1,24 +1,8 @@
 import { useState } from "react"
-import {geminiAssets} from "../../../assets/geminiAssets"
+import { displayCardData } from "../../Context/GeminiContext"
 
 export default function DisplayCard(){
-    const store= [
-        {
-            title: "compass ", 
-            image : geminiAssets.bulb_icon
-        },
-        {
-            title: "code",
-            image : geminiAssets.code_icon
-        },
-        {
-            title: "bulb",
-            image : geminiAssets.bulb_icon
-        }
-
-    ]
-    const [data, _] = useState(store)
-
+    const [data, _] = useState(displayCardData);
     return (
         <div className="displayCard">
              {

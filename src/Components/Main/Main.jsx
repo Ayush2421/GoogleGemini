@@ -2,17 +2,17 @@ import "./Main.css"
 import {useContext} from "react"
 import Contents from "./Parts/Contents"
 import NavBar from "./Parts/NavBar"
-import SearchItems from "./Parts/SearchItems"
-import SearchResult from "./Parts/SearchResult"
+import FooterItems from "./Parts/FooterItems"
+import ShowSearchedResult from "./Parts/ShowSearchedResult"
 import { context } from "../Context/GeminiContext"
 
 export default function Main(){
  const {searchingResult} = useContext(context)
     return (
-      <div className="Main">
+      <div className="main">
         <NavBar/>
-        {searchingResult? <SearchResult />: <Contents /> }
-        <SearchItems/>
+        {searchingResult? <ShowSearchedResult />: <Contents /> }
+        <FooterItems/>
       </div>
     )
   }
