@@ -1,10 +1,12 @@
 import { useContext } from "react"
 import {geminiAssets} from "../../../assets/geminiAssets"
 import { context } from "../../Context/GeminiContext"
+import { geminiBtn } from "../../Context/GeminiBtnContext";
 
 export default function FooterItems(){
     const {input, setInput, setLoading, setSearchingResult, setSetResultCount, 
     historyPrompt, setHistoryPrompt,recentlengthTab,setResultData, onSent } = useContext(context);
+    const { isDark } = useContext(geminiBtn);
     const handleSentBtn=()=>{
         onSent(input)
         setInput("");
@@ -14,11 +16,10 @@ export default function FooterItems(){
         setSearchingResult(true);
         setHistoryPrompt((prev)=> [...prev, input]);
     }
-   
       return (
         <div className="footerItems" onKeyDown={(e)=> e.key==="Enter" && handleSentBtn()}>
-            <div className="inputField">
-            <input onChange={(e)=> setInput(e.target.value)} value={input} placeholder="Enter any prompt"/>
+            <div className="inputField" id={isDark ?"darkInputField":""}>
+            <input style={{color: isDark ?"white":""}} onChange={(e)=> setInput(e.target.value)} value={input} placeholder="Enter any prompt"/>
             <img src={geminiAssets.gallery_icon} alt="gallery"/>
             <img src={geminiAssets.mic_icon} alt="mic"/>
             <img onClick={handleSentBtn} src={geminiAssets.send_icon} alt="send"/>

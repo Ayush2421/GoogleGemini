@@ -9,11 +9,11 @@ import { geminiBtn, sideBarBottomBtns } from "../Context/GeminiBtnContext"
 
 export default function Main() {
   const { searchingResult } = useContext(context)
-  const { whichPageVisible } = useContext(geminiBtn);
+  const { whichPageVisible, isDark } = useContext(geminiBtn);
   const ActiveComponents = sideBarBottomBtns[whichPageVisible] && sideBarBottomBtns[whichPageVisible].Component;
 
   return (
-    <div className="main">
+    <div className="main" id={isDark ?"darkMain":""}>
       <NavBar />
       {
         (whichPageVisible !== null) ? <ActiveComponents />

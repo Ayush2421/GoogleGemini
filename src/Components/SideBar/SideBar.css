@@ -7,10 +7,19 @@ flex-direction: column;
 justify-content: space-between;
 background-color: var(--sideBarColor);
 }
+#darkSideBar{
+    background-color: var(--sideBarDarkColor);
+}
 .topContainer>img:hover{
     scale: 1.2;
-    box-shadow: 0px 0px 8px var(--commonHoverColor);
     cursor:pointer;
+    box-shadow: 0px 0px 8px var(--commonHoverColor);
+}
+#darkTopContainer >img{
+    filter: drop-shadow(0px 0px 1px var(--commonHoverDarkColor));
+}
+#darkTopContainer>img:hover{
+    box-shadow: 0px 0px 8px var(--commonHoverDarkColor);
 }
 .topContainer, .bottomContainer{
     padding: 10px 0px;
@@ -28,8 +37,19 @@ background-color: var(--sideBarColor);
     border-radius: 50px;
     background-color: var(--elementsContainerColor);
 }
+#darkSBElement{
+    border: 1px solid var(--whiteColor);
+    background-color: var(--blackColor);
+    color: var(--whiteColor)
+}
+#darkSBElement>img{
+    filter: drop-shadow(0px 0px 0.5px var(--commonHoverDarkColor));
+}
 .sideBarElements:hover{
     background-color: var(--elementsContainerHoverColor);
+}
+#darkSBElement:hover{
+    background-color: var(--elementsContainerHoverDarkColor);
 }
 .sideBarElements> label{
     padding-left:5px;

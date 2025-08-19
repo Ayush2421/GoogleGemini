@@ -4,19 +4,21 @@
   box-sizing:border-box;
 }
 :root{
-  --bgColor: white;
-  --fontColor: black;
+  --whiteColor: white;
+  --blackColor: black;
+
   --sideBarColor:rgb(230, 237, 237);
   --elementsContainerColor: rgb(221, 229, 230);
-  --elementsContainerHoverColor: rgb(162, 186, 189);
+  --elementsContainerHoverColor: rgb(171, 188, 201);
   --commonHoverColor: rgb(26, 119, 132);
-  --commonBorderColor: black;
+
+  --sideBarDarkColor:rgb(29, 29, 31);
+  --elementsContainerHoverDarkColor: rgb(202, 196, 188);
+  --commonHoverDarkColor: rgb(255, 255, 255);
 }
 body{
   width:100vw;
   height:100vh;
-  background-color: var(--bgColor);
-  color: var(--fontColor);
   font-size: 2vw;
 }
 h1{

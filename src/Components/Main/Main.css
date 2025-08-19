@@ -5,6 +5,12 @@
     gap:5px;
     display: flex;
     flex-direction: column;
+    background-color: var(--whiteColor);
+    color: var(--blackColor);
+}
+#darkMain{
+    background-color: var(--blackColor);
+    color: var(--whiteColor);
 }
 /* 👉navBar */
 .navBar{
@@ -20,6 +26,9 @@
 .navBar>img:hover{
     scale: 1.2;
     box-shadow: 0px 0px 10px var(--commonHoverColor);
+}
+#darkNavBar>img:hover{
+    box-shadow: 0px 0px 10px var(--commonHoverDarkColor);
 }
 
 /* 👉contents */
@@ -52,15 +61,25 @@
     gap: 20px;
 }
 .card{
-    border: 1px solid var(--commonBorderColor);
-    background-color: var(--elementsContainerColor);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+    border: 1px solid var(--blackColor);
+    background-color: var(--elementsContainerColor);
+    color: var(--blackColor)
+}
+#darkCard{
+    border: 1px solid var(--whiteColor);
+    background-color: var(--blackColor);
+    color: var(--whiteColor)
+    
 }
 .card:hover{
     background-color: var(--elementsContainerHoverColor);
+}
+#darkCard:hover{
+    background-color: var(--elementsContainerHoverDarkColor);
 }
 .card>span{
     max-width:auto;
@@ -71,6 +90,9 @@
     position:absolute;
     bottom:8px;
     right:8px;
+}
+#darkCard>img{
+    filter: drop-shadow(0px 0px 0.5px var(--commonHoverDarkColor));
 }
 
 /* 👉 searchedResult*/
@@ -143,9 +165,12 @@
     display: flex;
     align-items: center;
     border-radius: 50px;
-    border: 1px solid var(--commonBorderColor);
-
+    border: 1px solid var(--blackColor);
 }
+#darkInputField{
+    border: 1px solid var(--whiteColor);
+}
+
 .inputField> input{
     background: transparent;
     border: none;
@@ -159,11 +184,17 @@
     height: auto;
     margin:0px 3px;
 }
+#darkInputField>img{
+    filter: drop-shadow(0px 0px 0.5px var(--commonHoverDarkColor))
+}
 .inputField>img:hover{
     cursor:pointer;
     scale: 1.2;
     filter: drop-shadow(0px 0px 0.5px var(--commonHoverColor));
+}
 
+#darkInputField>img:hover{
+    filter: drop-shadow(0px 0px 1px var(--commonHoverDarkColor));
 }
 .textBelowInput{
     width:70%;
