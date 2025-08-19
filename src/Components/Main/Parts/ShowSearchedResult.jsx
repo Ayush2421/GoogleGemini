@@ -8,12 +8,12 @@ export default function ShowSearchedResult() {
     <div className="searchedResult">
 
       <div className="questionContainer">
-        <img src={geminiAssets.gemini_icon} alt="gemini" />
+        <img src={geminiAssets.user_icon} alt="user" />
         {historyPrompt.length > 0 && <span>{historyPrompt.slice(-1)}</span>}
       </div>
 
       <div className="resultContainer">
-        {/* <img src={geminiAssets.gemini_icon} alt="gemini" /> */}
+        <img src={geminiAssets.gemini_icon} alt="gemini" />
         {
           loading ? <h1>Loading......</h1> 
           :<p dangerouslySetInnerHTML={{__html:resultData }}></p>

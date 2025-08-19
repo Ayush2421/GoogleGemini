@@ -89,12 +89,12 @@
     padding: 10px 50px;
 }
 .questionContainer > span{
-    padding-left:5px;
+    padding-left: 10px;
     text-wrap: wrap;
     overflow-y: hidden;
     line-height: 18px;
     letter-spacing: 1.2px;
-    font-size: 2vw;
+    font-size: 2.4vw;
 }
 .resultContainer{
     height:80%;
@@ -103,7 +103,12 @@
     position: absolute;
     bottom: 0;
     padding: 10px 50px;
-    padding-left: 16vw;
+}
+.resultContainer >img{
+    width:5em;
+    height:5em;
+    margin-top: -3px;
+    margin-left: -3px;
 }
 .resultContainer>p{
     letter-spacing: 1.1px;
@@ -172,6 +177,9 @@
 @media (width < 500px){
     .info{
         height: 25%;
+        padding-left: 0px;
+        display: flex;
+        align-items: center;
     }
     .displayCard{
         height:75%;
@@ -187,10 +195,31 @@
     .card>span{
         font-size: 3vw;
     }
+    .resultContainer{
+        padding: 10px 20px;
+    }
     .resultContainer>p{
         font-size: 3vw;
     }
+    .questionContainer{
+        padding: 10px 20px;
+    }
     .questionContainer > span{
         font-size: 3vw;
+    }
+
+    .inputField{
+        height: 4vh;
+        width: 50%;
+    }
+    .inputField> input{
+        font-size: 3.6vw;
+    }
+    .inputField > img{
+        width: 4vw;
+        margin:0px 2px;
+    }
+    .textBelowInput{
+        font-size: 2.6vw;
     }
 }
